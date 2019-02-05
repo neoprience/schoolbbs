@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yzq.bbs.mapper.AdminMapper">
+	<select id="checkUserName" parameterType="string" resultType="int">
+	 select count(user_id) from user where user_name=#{userName}
+	</select>
+	
+	<select id="checkLogin" parameterType="User" resultType="User">
+	select * from user where user_name=#{userName}
+	and user_password=#{userPassword} and user_type=1
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
